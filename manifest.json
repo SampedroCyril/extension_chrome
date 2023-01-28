@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Explostension",
+  "description": "A little explosive extension...",
+  "version": "1.0",
+  "permissions": [
+      "activeTab"
+  ],
+  "action": {
+      "default_icon": {
+          "16": "images/icons/icon16.png",
+          "24": "images/icons/icon24.png",
+          "32": "images/icons/icon32.png"
+      },
+      "default_title": "Explostension",
+      "default_popup": "Explostension.html"
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "default": "Ctrl+Shift+F",
+      "mac": "MacCtrl+Shift+F"
+    }
+  },
+  "icons": {
+      "16": "images/icons/icon16.png",
+      "24": "images/icons/icon24.png",
+      "32": "images/icons/icon32.png",
+      "128": "images/icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.malorourissol.com/*"],
+      "css": [],
+      "js": ["background.js"]
+    }
+  ]
+}
